@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frase Encriptada</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    body{
+      background-color: rgb(235, 255, 255);
+      
+      & h1{
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        .sub-contenedor{
+          background-color: rgb(155, 190, 255);
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          height: 300px;
+          width: 500px;
+
+          .titulo{
+            font: 1.4em "Arial";
+            margin: 0 20px;
+          }
+          .frase{
+            background-color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            margin: 5px 20px;
+            outline: none;
+            padding: 10px;
+            resize: none;
+          }
+          .btn{
+            align-self: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: 1em "Arial";
+            padding: 10px;
+            width: 200px;
+          }
+          .btn:active{
+            background-color: rgb(226, 226, 226);
+          }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Frase Encriptada</h1>
+
+  <div class="contenedor">
+    <div class="sub-contenedor">
+      <p class="titulo">Frase Usuario</p>
+      <textarea cols="30" rows="6" class="frase" id="frase-usuario" placeholder="Inserte Frase"></textarea>
+      <button class="btn" id="btn-en">Encriptar</button>
+    </div>
+    <div class="sub-contenedor">
+      <p class="titulo">Frase Encriptada</p>
+      <textarea cols="30" rows="4" class="frase" id="frase-en" placeholder="Frase Encriptada"></textarea>
+      <textarea cols="30" rows="4" class="frase" id="frase-des" placeholder="Frase Desencriptada"></textarea>
+      <button class="btn" id="btn-des">Desencriptar</button>
+    </div>
+  </div>
+
+  <script src="./frase.js"></script>
+</body>
+</html>
